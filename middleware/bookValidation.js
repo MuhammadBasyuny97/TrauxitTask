@@ -1,4 +1,4 @@
-//import { Categories } from "../model/category.js";
+import Categories  from "../model/category.js";
 
 export  const validateBook = async (title, price,description,category) => {
     const errors = [];
