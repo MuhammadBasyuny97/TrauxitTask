@@ -1,0 +1,395 @@
+{
+	"info": {
+		"_postman_id": "86c88846-11ef-437e-a1ef-e244f48c9055",
+		"name": "Project",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Categories",
+			"item": [
+				{
+					"name": "Get Categories",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:5000/category/getCategories/",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"category",
+								"getCategories",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Category",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjaGVja1VzZXIiOnsiaWQiOiIzM2NjZDE5NGVkYyIsInVzZXJOYW1lIjoibXVoYW1tYWQiLCJlbWFpbCI6Im11aGFtbWFkYmFzeXVueWRldkBnbWFpbC5jb20iLCJwYXNzd29yZCI6ImVrQlNaVDhMTHhoeTg2L2U1cWQ2cDVVM2E3SjlQdGU1ODE4RkhPL3BlTjA9In0sImlhdCI6MTY4ODAxMzQ5MywiZXhwIjoxNjg4MDE3MDkzfQ.odDARlI7EfJQlk7tbMD7_Ir4aUmQaPFUUfuxKmAMjZg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:5000/category/getCategory/",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"category",
+								"getCategory",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Category",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjaGVja1VzZXIiOnsiaWQiOiIzM2NjZDE5NGVkYyIsInVzZXJOYW1lIjoibXVoYW1tYWQiLCJlbWFpbCI6Im11aGFtbWFkYmFzeXVueWRldkBnbWFpbC5jb20iLCJwYXNzd29yZCI6ImVrQlNaVDhMTHhoeTg2L2U1cWQ2cDVVM2E3SjlQdGU1ODE4RkhPL3BlTjA9In0sImlhdCI6MTY4ODAxMzQ5MywiZXhwIjoxNjg4MDE3MDkzfQ.odDARlI7EfJQlk7tbMD7_Ir4aUmQaPFUUfuxKmAMjZg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"hats\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:5000/category/createCategory/",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"category",
+								"createCategory",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Category",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjaGVja1VzZXIiOnsiaWQiOiIzM2NjZDE5NGVkYyIsInVzZXJOYW1lIjoibXVoYW1tYWQiLCJlbWFpbCI6Im11aGFtbWFkYmFzeXVueWRldkBnbWFpbC5jb20iLCJwYXNzd29yZCI6ImVrQlNaVDhMTHhoeTg2L2U1cWQ2cDVVM2E3SjlQdGU1ODE4RkhPL3BlTjA9In0sImlhdCI6MTY4ODAxMzQ5MywiZXhwIjoxNjg4MDE3MDkzfQ.odDARlI7EfJQlk7tbMD7_Ir4aUmQaPFUUfuxKmAMjZg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"accessories\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:5000/category/updateCategory/hats",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"category",
+								"updateCategory",
+								"hats"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Category",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjaGVja1VzZXIiOnsiaWQiOiI3YTFkYzhkOTJhNCIsInVzZXJOYW1lIjoibXVoYW1tYWQiLCJlbWFpbCI6Im11aGFtbWFkYmFzeXVueWRldkBnbWFpbC5jb20iLCJwYXNzd29yZCI6ImVrQlNaVDhMTHhoeTg2L2U1cWQ2cDVVM2E3SjlQdGU1ODE4RkhPL3BlTjA9In0sImlhdCI6MTY4ODAxMjc2MywiZXhwIjoxNjg4MDE2MzYzfQ.rQoPOFr3ygmYjTUknrPcAZWelp_3Qx_IdpwszR0_xUw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:5000/category/deleteCategory/",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"category",
+								"deleteCategory",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Products",
+			"item": [
+				{
+					"name": "Get Products",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjaGVja1VzZXIiOnsiaWQiOiIzOWNiMWUxYjBlOCIsInVzZXJOYW1lIjoibXVoYW1tYWQiLCJlbWFpbCI6Im11aGFtbWFkYmFzeXVueWRldkBnbWFpbC5jb20iLCJwYXNzd29yZCI6ImVrQlNaVDhMTHhoeTg2L2U1cWQ2cDVVM2E3SjlQdGU1ODE4RkhPL3BlTjA9In0sImlhdCI6MTY4ODAwODAyNiwiZXhwIjoxNjg4MDExNjI2fQ.ekmPk0pFggU_sLWnirydEjSACXKXEXY-mLriJc-HBJg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:5000/product/getProducts/",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"product",
+								"getProducts",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Product",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:5000/product/getProduct/",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"product",
+								"getProduct",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Product",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjaGVja1VzZXIiOnsiaWQiOiIzOWNiMWUxYjBlOCIsInVzZXJOYW1lIjoibXVoYW1tYWQiLCJlbWFpbCI6Im11aGFtbWFkYmFzeXVueWRldkBnbWFpbC5jb20iLCJwYXNzd29yZCI6ImVrQlNaVDhMTHhoeTg2L2U1cWQ2cDVVM2E3SjlQdGU1ODE4RkhPL3BlTjA9In0sImlhdCI6MTY4ODAwODAyNiwiZXhwIjoxNjg4MDExNjI2fQ.ekmPk0pFggU_sLWnirydEjSACXKXEXY-mLriJc-HBJg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": " {\r\n        \"name\": \"AirMax \",\r\n        \"price\": 800,\r\n        \"category_id\": \"shoes\"\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:5000/products/createProduct",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"products",
+								"createProduct"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Product",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjaGVja1VzZXIiOnsiaWQiOiI3YTFkYzhkOTJhNCIsInVzZXJOYW1lIjoibXVoYW1tYWQiLCJlbWFpbCI6Im11aGFtbWFkYmFzeXVueWRldkBnbWFpbC5jb20iLCJwYXNzd29yZCI6ImVrQlNaVDhMTHhoeTg2L2U1cWQ2cDVVM2E3SjlQdGU1ODE4RkhPL3BlTjA9In0sImlhdCI6MTY4ODAxMjc2MywiZXhwIjoxNjg4MDE2MzYzfQ.rQoPOFr3ygmYjTUknrPcAZWelp_3Qx_IdpwszR0_xUw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "   {\r\n        \"name\": \"Air \",\r\n        \"price\": 900,\r\n        \"category_id\": \"shoes\"\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:5000/product/updateProduct/788c3b8ccfc",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"product",
+								"updateProduct",
+								"788c3b8ccfc"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Products",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjaGVja1VzZXIiOnsiaWQiOiI3YTFkYzhkOTJhNCIsInVzZXJOYW1lIjoibXVoYW1tYWQiLCJlbWFpbCI6Im11aGFtbWFkYmFzeXVueWRldkBnbWFpbC5jb20iLCJwYXNzd29yZCI6ImVrQlNaVDhMTHhoeTg2L2U1cWQ2cDVVM2E3SjlQdGU1ODE4RkhPL3BlTjA9In0sImlhdCI6MTY4ODAxMjc2MywiZXhwIjoxNjg4MDE2MzYzfQ.rQoPOFr3ygmYjTUknrPcAZWelp_3Qx_IdpwszR0_xUw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:5000/product/deleteProduct/88c3b8ccfc4",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"product",
+								"deleteProduct",
+								"88c3b8ccfc4"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "userRegister",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"userName\": \"muhammad\",\r\n    \"email\" : \"muhammadbasyunydev1@gmail.com\",\r\n    \"password\": \"Mohamed@2015\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:5000/user/user-register",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"user",
+								"user-register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "userLogin",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\" : \"muhammadbasyunydev@gmail.com\",\r\n    \"password\": \"Mohamed@2015\",\r\n    \"passwordRepeat\": \"Mohamed@2015\" \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:5000/user/user-login",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"user",
+								"user-login"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
