@@ -1,6 +1,6 @@
-import { Categories } from "../model/category.js";
+//import { Categories } from "../model/category.js";
 
-export  const validateProduct = async (title, price,description,category) => {
+export  const validateBook = async (title, price,description,category) => {
     const errors = [];
     if( typeof title !== "string" || title.length < 3 ){
         errors.push("Title must be a string with at least 3 charcters");

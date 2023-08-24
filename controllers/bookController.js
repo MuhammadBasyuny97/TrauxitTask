@@ -1,8 +1,8 @@
 
 import { object, string, number} from 'yup';
-import { validateProduct } from '../middleware/bookValidation.js';
-import { Books } from '../model/book.js';
-import { Category } from '../model/category.js';
+import { validateBook } from '../middleware/bookValidation.js';
+import  Book  from '../model/book.js';
+import  Category  from '../model/category.js';
 
 // Validating using yup
   let userSchema = object({
@@ -15,14 +15,14 @@ import { Category } from '../model/category.js';
 
 //Get All Books
 export const getBooks = async (req,res) => {
-  const books = await Books.find({});
+  const books = await Book.find({});
   res.status(200).json({ books });
 }
 
 //Get Book By Id
 export const getBook = async (req,res) => {
   const { id: bookID } = req.params;
-  const book = await Books.findOne({ _id: bookID });
+  const book = await Book.findOne({ _id: bookID });
   if (!book) {
     res.status(404).json({ Error: "Book Not Found!" });
   }
@@ -35,7 +35,7 @@ export const getBook = async (req,res) => {
 export const createBook= async(req,res) => {
   try{
     const {title, price,description,category} = req.body;
-    const errors = validateProduct(title,price,description,category);
+    const errors = validateBook(title,price,description,category);
     if(errors.length > 0){
       res.status(401).json(errors);
     }
@@ -52,7 +52,7 @@ export const createBook= async(req,res) => {
                 category,
             } 
           // Creating New Book
-            const book = await Books.create(newBook);
+            const book = await Book.create(newBook);
             res.status(201).json({ book });
           }
        
@@ -71,7 +71,7 @@ export const updateBook = async (req,res) => {
       const {title,price,description,category} = req.body;
     //Validating using user-defined function "validateProduct" and "userSchema" NPM package
       let errors = [];
-      errors = validateProduct(title,price,description,category);
+      errors = validateBook(title,price,description,category);
       if(errors.length > 0){
         res.status(401).json(errors);
       }
@@ -83,7 +83,7 @@ export const updateBook = async (req,res) => {
       if(valid){  
      // Updating the book
         const { id: bookID } = req.params;
-        const book = await Books.findOneAndUpdate({ _id: bookID }, req.body, {
+        const book = await Book.findOneAndUpdate({ _id: bookID }, req.body, {
           new: true,
           runValidators: true,
         });
@@ -102,7 +102,7 @@ export const updateBook = async (req,res) => {
 export const deleteBook =async (req,res) => {
   try{
     const { id: bookID } = req.params;
-    const book = await Books.findOneAndDelete({ _id: bookID });
+    const book = await Book.findOneAndDelete({ _id: bookID });
     if (!book) {
       res.status(404).json({ Error: "Book Not Found!" });
     }

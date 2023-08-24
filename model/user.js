@@ -1,4 +1,4 @@
-import { Schema, model } from "mongoose";
+import { Schema, model,connect } from "mongoose";
 
 const userSchema = new Schema({
   fullName: {
@@ -7,7 +7,7 @@ const userSchema = new Schema({
   },
   email: {
     type: String,
-    unique: [true, "email already exists in database!"],
+   // unique: [true, "email already exists in database!"],
     lowercase: true,
     trim: true,
     required: [true, "email not provided"],
@@ -17,11 +17,6 @@ const userSchema = new Schema({
       },
       message: "{VALUE} is not a valid email!",
     },
-  },
-  role: {
-    type: String,
-    enum: ["normal", "admin"],
-    required: [true, "Please specify user role"],
   },
   password: {
     type: String,
@@ -33,5 +28,6 @@ const userSchema = new Schema({
   },
 });
 
+connect('mongodb://localhost:27017/project');
 export default model("User", userSchema);
 

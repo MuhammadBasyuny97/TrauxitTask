@@ -1,5 +1,5 @@
 
-import { Schema, model } from "mongoose";
+import { Schema, model,connect } from "mongoose";
 import Category from "./category.js";
 
 const BookSchema = new Schema({
@@ -31,4 +31,5 @@ const BookSchema = new Schema({
     required: true,
   },
 });
+connect('mongodb://localhost:27017/project');
 export default model("Book", BookSchema);

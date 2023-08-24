@@ -1,7 +1,7 @@
 
 import { validateCategory } from './../middleware/categoryValidation.js';
 
-import { Category } from '../model/category.js';
+import  Category  from '../model/category.js';
 
 
 export const getCategories = async (req,res) => {
@@ -40,8 +40,7 @@ export const createCategory =async (req,res) => {
                               "Message":"Invalid Data",
                               "Error": error 
                             });
-     }
-                                    
+     }                               
       res.end();
    }
 

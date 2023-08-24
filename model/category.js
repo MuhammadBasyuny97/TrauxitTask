@@ -1,6 +1,6 @@
 
 
-import { Schema, model } from "mongoose";
+import { Schema, model,connect } from "mongoose";
 
 const CategorySchema = new Schema({
   _id: {
@@ -18,6 +18,6 @@ const CategorySchema = new Schema({
     required: true,
   },
 });
+connect('mongodb://localhost:27017/project');
 const Category = model("Category", CategorySchema);
-
 export default Category;
